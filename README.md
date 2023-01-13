@@ -9,6 +9,7 @@ If something is already running on `3000`, do `npx cross-port-killer 3000` to ki
 ## Component creation flow
 
 Let's put all the common components such as `buttons`, `inputs` under `./src/components`
+
 Let's put all the page/module specific components under `./src/modules`
 
 ## Technologies used
