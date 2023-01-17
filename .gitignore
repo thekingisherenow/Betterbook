@@ -6,7 +6,7 @@
 .pnp.js
 
 # untrack git .history folder
-.history
+/.history/
 
 # testing
 /coverage
