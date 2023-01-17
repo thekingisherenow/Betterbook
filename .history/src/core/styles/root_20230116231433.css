@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    @apply active:bg-blue-600 p-4 hover:font-bold cursor-pointer hover:scale-110 transition-transform duration-200 ease-out; 
+}
