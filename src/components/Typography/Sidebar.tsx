@@ -15,7 +15,7 @@ function Sidebar() {
                         <p>Favourites</p>
                     </button>
                 </div>
-                    <hr className='border-t-2 border-gray-500' />
+                <hr className='border-t-2 border-gray-500' />
 
                 <div className='flex flex-col space-y-5  p-5 font-semibold mb-4'>
                     <button className='flex items-center space-x-2 hover:text-blue-600'>

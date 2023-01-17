@@ -13,15 +13,15 @@ const IndexPage: NextPage = () => {
   }, [])
 
   return <div>
-        <main className=''>
+    <main >
 
-          {/* Header  */}
-          <Header />
-            {/* Sidebar */}
-            <Sidebar/>
-            {/* Center  */}
+      {/* Header  */}
+      <Header />
+      {/* Sidebar */}
+      <Sidebar />
+      {/* Center  */}
 
-        </main>
+    </main>
   </div>
 }
 

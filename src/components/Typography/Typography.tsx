@@ -1,4 +1,4 @@
-interface Props {}
+interface Props { }
 
 const Typography: React.FC<Props> = () => {
   return <p>Typography</p>

@@ -5,15 +5,15 @@ import { useRouter } from 'next/router'
 
 function NavLinks() {
   const router = useRouter();
-  
+
   //const isActive is true if the pathname in the url matches the  navlink's path.
-  const isActive = (path:string)=>{
-    return router.pathname===path
+  const isActive = (path: string) => {
+    return router.pathname === path
   }
-    
+
   return (
     <nav>
-      {categories.map((category)=>(
+      {categories.map((category) => (
         <NavLink key={category.label} category={category.label} path={category.path} isActive={isActive(category.path)} />
       ))}
     </nav>
