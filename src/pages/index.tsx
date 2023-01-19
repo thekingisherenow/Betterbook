@@ -13,14 +13,8 @@ const IndexPage: NextPage = () => {
   }, [])
 
   return <div>
-    <main >
-
-      {/* Header  */}
-      <Header />
-      {/* Sidebar */}
-      <Sidebar />
-      {/* Center  */}
-
+    <main className='m-50 '>
+      This is the index page.
     </main>
   </div>
 }

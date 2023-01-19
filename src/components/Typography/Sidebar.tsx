@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { LegacyRef, forwardRef, useState } from 'react'
 import { FireIcon, StarIcon } from '@heroicons/react/24/solid'
+import Image from 'next/image'
 
-function Sidebar() {
+type Props = {
+    showNav: boolean
+}
+const Sidebar = forwardRef<HTMLDivElement, Props>(({ showNav }: Props, ref) => {
+
     return (
-        <div className='text-gray-500 text-sm border-r h-screen w-40 border-gray-500'>
-            <div>
-                <div className='flex flex-col  p-5 space-y-3 font-semibold mb-4'>
+        <div ref={ref}
+            className='fixed text-sm border h-full  shadow-sm  w-36 
+             bg-gray-100 dark:bg-zinc-900  z-20 dark:border-gray-500'>
+
+            <div className=' flex flex-col'>
+
+                {/* Image */}
+                <div className='relative w-full h-36  '>
+                    <Image className='object-cover' sizes='10vw'
+                        src={"https://iili.io/HamHDdJ.jpg"} fill alt='favicon' />
+                </div>
+
+                <div className='flex flex-col  p-5 space-y-3 font-semibold mb-4 '>
                     <button className='flex items-center space-x-2 hover:text-blue-600'>
                         <FireIcon className='w-5 h-5' />
                         <p>Featured</p>
@@ -42,6 +57,9 @@ function Sidebar() {
             </div>
         </div>
     )
-}
+
+})
+
+Sidebar.displayName = "Sidebar"
 
 export default Sidebar

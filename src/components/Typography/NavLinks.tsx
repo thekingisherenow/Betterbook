@@ -12,7 +12,7 @@ function NavLinks() {
   }
 
   return (
-    <nav>
+    <nav className=' whitespace-nowrap'>
       {categories.map((category) => (
         <NavLink key={category.label} category={category.label} path={category.path} isActive={isActive(category.path)} />
       ))}

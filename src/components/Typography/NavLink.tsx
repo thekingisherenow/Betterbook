@@ -10,7 +10,7 @@ type Props = {
 function NavLink({ category, path, isActive }: Props) {
   return (
     <Link href={`${path}`}
-      className={`cursor-pointer p-4 text-sm  font-semibold
+      className={`cursor-pointer p-1 md:p-3  text-xs md:text-sm  font-semibold
          ${isActive && 'text-blue-500 hover:text-blue-600 font-bold '}`}
     >
       {category}

@@ -1,10 +1,8 @@
 import React from 'react'
-import Header from '../components/Typography/Header'
 
 function vaults() {
   return (
-    <div>
-        <Header />
+    <div className='pl-56 bg-gray-100 dark:bg-zinc-900'>
       this is vault
     </div>
   )

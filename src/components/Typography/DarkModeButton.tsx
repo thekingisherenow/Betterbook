@@ -20,12 +20,12 @@ function DarkModeButton() {
       {currentTheme === 'dark' ?
         <SunIcon
           onClick={() => setTheme("light")}
-          className='h-8 w-8 cursor-pointer text-yellow-500'
+          className='h-10 w-12 p-1 cursor-pointer text-center border-x-2 dark:border-gray-300 text-yellow-500'
         />
         :
         <MoonIcon
           onClick={() => setTheme("dark")}
-          className='h-8 w-8 cursor-pointer text-gray-900'
+          className='h-10 w-12 p-1 cursor-pointer text-center border-x-2 dark:border-gray-300 text-gray-900'
         />
 
       }
