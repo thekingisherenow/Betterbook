@@ -11,7 +11,8 @@ interface Props {
 const Header: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
   return (
     <header>
-      <div className={`w-full p-1 fixed flex text-center h-12 bg-gray-100 dark:bg-zinc-900  transition-all duration-[400ms] border-b border-gray-300 ${showNav ? "pl-36" : ""}`}>
+      <div className={`w-full z-50 p-1 fixed flex text-center h-12 bg-gray-100
+       dark:bg-zinc-900  border-b border-gray-300 `}>
         <Bars3Icon onClick={() => setShowNav(!showNav)}
           className='h-11 w-11 p-3  text-center  cursor-pointer' />
         <div >
@@ -25,7 +26,7 @@ const Header: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
           <DarkModeButton />
           <div className='text-center flex items-center p-1 '>
             {/* Image  */}
-            <div className='relative h-12 w-12 rounded-full '>
+            <div className='relative h-12 w-12 rounded-full cursor-pointer '>
               <Image src={"https://iili.io/HamKXbj.jpg"}
                 className='object-cover rounded-full p-1'
                 sizes='6vw'

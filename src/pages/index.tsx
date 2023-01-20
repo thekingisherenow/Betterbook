@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import { useEffect, useState } from 'react'
 import API from '../core/services'
 import { Game } from '../types/game'
-import Sidebar from '../components/Typography/Sidebar'
-import Header from '../components/Typography/Header'
+import Banner from '../components/Typography/Banner'
+import BetsField from '../components/Typography/BetsField'
 
 const IndexPage: NextPage = () => {
   const [games, setGames] = useState<Game[]>([])
@@ -13,8 +13,10 @@ const IndexPage: NextPage = () => {
   }, [])
 
   return <div>
-    <main className='m-50 '>
-      This is the index page.
+    <main className='flex flex-col'>
+      <Banner />
+
+      <BetsField />
     </main>
   </div>
 }

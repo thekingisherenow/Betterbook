@@ -9,7 +9,7 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(({ showNav }: Props, ref) => {
 
     return (
         <div ref={ref}
-            className='fixed text-sm border h-full  shadow-sm  w-36 
+            className='fixed mt-12 text-sm border h-full  shadow-2xl  w-36 
              bg-gray-100 dark:bg-zinc-900  z-20 dark:border-gray-500'>
 
             <div className=' flex flex-col'>
@@ -31,7 +31,6 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(({ showNav }: Props, ref) => {
                     </button>
                 </div>
                 <hr className='border-t-2 border-gray-500' />
-
                 <div className='flex flex-col space-y-5  p-5 font-semibold mb-4'>
                     <button className='flex items-center space-x-2 hover:text-blue-600'>
                         <FireIcon className='w-5 h-5' />

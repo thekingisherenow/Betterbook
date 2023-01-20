@@ -3,6 +3,8 @@ import Header from './Header'
 import { Transition } from '@headlessui/react'
 import Sidebar from './Sidebar'
 import { Fragment } from 'react'
+import BetSlip from './Betslip/BetSlip'
+import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid'
 
 interface LayoutProps {
     children: ReactNode
@@ -11,6 +13,7 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
     const [showNav, setShowNav] = useState(true)
     const [isMobile, setIsMobile] = useState(false)
+    const [showBetslip, setShowBetslip] = useState(false)
 
     function handleResize() {
         if (innerWidth <= 640) {
@@ -49,13 +52,23 @@ export default function Layout({ children }: LayoutProps) {
                 <Sidebar showNav={showNav} />
             </Transition>
             <main
-                className={`pt-16 transition-all duration-[400ms] ${showNav && !isMobile ? "pl-36" : ""}`} >
-                <div className='px-4 md:px-16'
-                >
-                    {children}
-                </div>
-            </main>
+                className={`relative pt-12 transition-all w-screen h-screen duration-[400ms] flex ${showNav && !isMobile ? "pl-36" : ""}`} >
+                <>
+                    <div className='px-1 md:px-2  '>
+                        {children}
+                    </div>
+                    {!showBetslip && <div className='h-60 p-4 '>
+                        {/* BetSlipToggleButton  */}
+                        <ArrowLeftOnRectangleIcon onClick={() => setShowBetslip(!showBetslip)}
+                            className='w-8 h-8 cursor-pointer flex items-center font-extrabold'
+                        />
+                    </div>}
 
+                    {showBetslip && <div className='bg-slate-300 dark:bg-zinc-800'>
+                        <BetSlip betslipState={[showBetslip, setShowBetslip]} />
+                    </div>}
+                </>
+            </main>
         </>
     )
 }
