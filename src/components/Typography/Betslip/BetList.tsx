@@ -10,7 +10,7 @@ function BetList() {
         <div className='flex flex-col h-64 p-5 justify-center items-center'>
           <TicketIcon className='w-28 h-28 text-gray-400' />
           <h1 className="font-bold">Your betslip is empty</h1>
-          <p>Click on odds to add a ticket.</p>
+          <p className='text-sm'>Click on odds to add a ticket.</p>
         </div>
         :
         <SingleBet />

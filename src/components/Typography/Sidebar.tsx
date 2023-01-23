@@ -1,54 +1,61 @@
-import React, { LegacyRef, forwardRef, useState } from 'react'
-import { FireIcon, StarIcon } from '@heroicons/react/24/solid'
+import React, { Dispatch, SetStateAction, forwardRef, useState } from 'react'
+import { Bars3Icon, FireIcon, StarIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
+import Link from 'next/link'
 
-type Props = {
-    showNav: boolean
+interface Props {
+    navState: [boolean, Dispatch<SetStateAction<boolean>>]
 }
-const Sidebar = forwardRef<HTMLDivElement, Props>(({ showNav }: Props, ref) => {
+
+const Sidebar = forwardRef<HTMLDivElement, Props>(({ navState: [showNav, setShowNav] }: Props, ref) => {
 
     return (
         <div ref={ref}
-            className='fixed mt-12 text-sm border h-full  shadow-2xl  w-36 
-             bg-gray-100 dark:bg-zinc-900  z-20 dark:border-gray-500'>
+            className='fixed text-sm border border-t-0 h-full  shadow-2xl  w-40 
+             bg-gray-200 dark:bg-zinc-900 z-50 dark:border-gray-500'>
 
-            <div className=' flex flex-col'>
-
+            <div className=' flex flex-col text-z dark:text-gray-200 '>
                 {/* Image */}
-                <div className='relative w-full h-36  '>
-                    <Image className='object-cover' sizes='10vw'
-                        src={"https://iili.io/HamHDdJ.jpg"} fill alt='favicon' />
+                <div className='flex space-x-6 border-b border-gray-300 h-14 '>
+                    <Bars3Icon
+                        onClick={() => setShowNav(!showNav)}
+                        className='h-11 w-11 p-3 mt-1 text-center  cursor-pointer' />
+                    <div className='relative w-10 h-10 mt-1  '>
+                        <Image className='object-cover' sizes='10vw'
+                            src={"https://iili.io/HlqHCP4.png"} fill alt='favicon' />
+                    </div>
                 </div>
 
-                <div className='flex flex-col  p-5 space-y-3 font-semibold mb-4 '>
-                    <button className='flex items-center space-x-2 hover:text-blue-600'>
+                <div className='flex flex-col  p-5 space-y-3 font-semibold mt-4 mb-4 '>
+                    <button className='flex items-center space-x-2 hover:text-blue-500'>
                         <FireIcon className='w-5 h-5' />
                         <p>Featured</p>
                     </button>
-                    <button className='flex items-center space-x-2 hover:text-blue-600'>
+                    <button className='flex items-center space-x-2 hover:text-blue-500'>
                         <StarIcon className='w-5 h-5' />
                         <p>Favourites</p>
                     </button>
                 </div>
-                <hr className='border-t-2 border-gray-500' />
-                <div className='flex flex-col space-y-5  p-5 font-semibold mb-4'>
-                    <button className='flex items-center space-x-2 hover:text-blue-600'>
+                <hr className='border-t-2 border-gray-300' />
+                <div className='flex flex-col space-y-3  p-5 font-semibold mb-4'>
+                    <Link href={"/soccer"}><button 
+                     className='flex items-center space-x-2 hover:text-blue-500'>
                         <FireIcon className='w-5 h-5' />
                         <p>Soccer</p>
-                    </button>
-                    <button className='flex items-center space-x-2 hover:text-blue-600'>
+                    </button></Link>
+                    <button className='flex items-center space-x-2 hover:text-blue-500'>
                         <StarIcon className='w-5 h-5' />
                         <p>Football</p>
                     </button>
-                    <button className='flex items-center space-x-2 hover:text-blue-600'>
+                    <button className='flex items-center space-x-2 hover:text-blue-500'>
                         <FireIcon className='w-5 h-5' />
                         <p>Basketball</p>
                     </button>
-                    <button className='flex items-center space-x-2 hover:text-blue-600'>
+                    <button className='flex items-center space-x-2 hover:text-blue-500'>
                         <FireIcon className='w-5 h-5' />
                         <p>Tennis</p>
                     </button>
-                    <button className='flex items-center space-x-2 hover:text-blue-600'>
+                    <button className='flex items-center space-x-2 hover:text-blue-500'>
                         <FireIcon className='w-5 h-5' />
                         <p>Baseball</p>
                     </button>

@@ -49,12 +49,12 @@ export default function Layout({ children }: LayoutProps) {
                 leaveFrom='translate-x-0'
                 leaveTo='-translate-x-full'
             >
-                <Sidebar showNav={showNav} />
+                <Sidebar navState={[showNav, setShowNav]} />
             </Transition>
             <main
-                className={`relative pt-12 transition-all w-screen h-screen duration-[400ms] flex ${showNav && !isMobile ? "pl-36" : ""}`} >
+                className={`relative pt-14 transition-all w-screen h-screen duration-[400ms] flex ${showNav && !isMobile ? "pl-40" : ""}`} >
                 <>
-                    <div className='px-1 md:px-2  '>
+                    <div className='px-1 md:px-2 w-full '>
                         {children}
                     </div>
                     {!showBetslip && <div className='h-60 p-4 '>
