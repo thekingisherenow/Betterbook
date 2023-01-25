@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction, forwardRef, useState } from 'react'
 import { Bars3Icon, FireIcon, StarIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
-import Link from 'next/link'
+import SidebarLinks from './SidebarLinks'
 
 interface Props {
     navState: [boolean, Dispatch<SetStateAction<boolean>>]
@@ -12,7 +12,7 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(({ navState: [showNav, setShow
     return (
         <div ref={ref}
             className='fixed text-sm border border-t-0 h-full  shadow-2xl  w-40 
-             bg-gray-200 dark:bg-zinc-900 z-50 dark:border-gray-500'>
+             bg-gray-100 dark:bg-zinc-900 z-50 dark:border-gray-500'>
 
             <div className=' flex flex-col text-z dark:text-gray-200 '>
                 {/* Image */}
@@ -38,32 +38,11 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(({ navState: [showNav, setShow
                 </div>
                 <hr className='border-t-2 border-gray-300' />
                 <div className='flex flex-col space-y-3  p-5 font-semibold mb-4'>
-                    <Link href={"/soccer"}><button 
-                     className='flex items-center space-x-2 hover:text-blue-500'>
-                        <FireIcon className='w-5 h-5' />
-                        <p>Soccer</p>
-                    </button></Link>
-                    <button className='flex items-center space-x-2 hover:text-blue-500'>
-                        <StarIcon className='w-5 h-5' />
-                        <p>Football</p>
-                    </button>
-                    <button className='flex items-center space-x-2 hover:text-blue-500'>
-                        <FireIcon className='w-5 h-5' />
-                        <p>Basketball</p>
-                    </button>
-                    <button className='flex items-center space-x-2 hover:text-blue-500'>
-                        <FireIcon className='w-5 h-5' />
-                        <p>Tennis</p>
-                    </button>
-                    <button className='flex items-center space-x-2 hover:text-blue-500'>
-                        <FireIcon className='w-5 h-5' />
-                        <p>Baseball</p>
-                    </button>
+                    <SidebarLinks />
                 </div>
             </div>
         </div>
     )
-
 })
 
 Sidebar.displayName = "Sidebar"

@@ -1,10 +1,10 @@
 import { ReactNode, useEffect, useState } from 'react'
-import Header from './Header'
 import { Transition } from '@headlessui/react'
-import Sidebar from './Sidebar'
+import Sidebar from './Sidebar/Sidebar'
 import { Fragment } from 'react'
 import BetSlip from './Betslip/BetSlip'
 import { ArrowLeftOnRectangleIcon } from '@heroicons/react/24/solid'
+import Navbar from './Navbar/Navbar'
 
 interface LayoutProps {
     children: ReactNode
@@ -38,7 +38,7 @@ export default function Layout({ children }: LayoutProps) {
 
     return (
         <>
-            <Header navState={[showNav, setShowNav]} />
+            <Navbar navState={[showNav, setShowNav]} />
             <Transition
                 show={showNav}
                 as={Fragment}
@@ -54,7 +54,7 @@ export default function Layout({ children }: LayoutProps) {
             <main
                 className={`relative pt-14 transition-all w-screen h-screen duration-[400ms] flex ${showNav && !isMobile ? "pl-40" : ""}`} >
                 <>
-                    <div className='px-1 md:px-2 w-full '>
+                    <div className='px-1 md:px-2 w-full  bg-gray-100 dark:bg-zinc-900 '>
                         {children}
                     </div>
                     {!showBetslip && <div className='h-60 p-4 '>

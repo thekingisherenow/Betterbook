@@ -1,7 +1,8 @@
-import { Category } from "../../types/category"
-
+type Category = 
+   {label:string, path:string}
+   
 export const categories: Category[] = [
-    { label: "Matches", path: "/" },
+    { label: "Matches", path: "/matches" },
     { label: "Vaults", path: "/vaults" },
     { label: "My Bets", path: "/account" },
     { label: "Leaderboard", path: "/leaderboard" },

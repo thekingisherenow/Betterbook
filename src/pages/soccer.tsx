@@ -1,18 +1,25 @@
 import React from 'react'
+import Matches from '../components/Typography/Sportspage/Matches'
+import Leauges from '../components/Typography/Sportspage/Leauges'
+import FeaturedMatch from '../components/Typography/Sportspage/FeaturedMatch'
+import SportsPageBanner from '../components/Typography/Sportspage/SportsPageBanner'
 
-function soccer() {
-  return (
-    <main >
+function Soccer() {
+    return (
+        <main >
             <div className='grid grid-cols-3'>
-                <div className='col-span-1  bg-slate-200'>
-                    FIrst grid.
+                <div className='col-span-1 mx-4 mt-4  '>
+                    <FeaturedMatch />
+                    <Leauges />
                 </div>
-                <div className='col-span-2 bg-gray-400'>
-                    Second grid.
+
+                <div className='col-span-2  mx-2 mt-9 '>
+                    <SportsPageBanner />
+                    <Matches />
                 </div>
             </div>
-    </main>
-  )
+        </main>
+    )
 }
 
-export default soccer
+export default Soccer

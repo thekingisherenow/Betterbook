@@ -8,7 +8,7 @@ interface Props {
   navState: [boolean, Dispatch<SetStateAction<boolean>>]
 }
 
-const Header: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
+const Navbar: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
   return (
     <header>
       <div className={`w-full z-20 p-1 fixed flex text-center h-14 bg-gray-100
@@ -52,4 +52,4 @@ const Header: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
   )
 }
 
-export default Header
+export default Navbar
