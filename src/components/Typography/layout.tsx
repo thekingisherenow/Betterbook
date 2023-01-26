@@ -51,12 +51,12 @@ export default function Layout({ children }: LayoutProps) {
         <Sidebar navState={[showNav, setShowNav]} />
       </Transition>
       <main
-        className={`relative pt-14 transition-all w-screen h-screen duration-[400ms] flex ${
+        className={`relative pt-14 transition-all bg-gray-100 w-screen h-screen duration-[400ms] flex ${
           showNav && !isMobile ? "pl-40" : ""
         }`}
       >
         <>
-          <div className="px-1 md:px-2 w-full  bg-gray-100 dark:bg-zinc-900 ">
+          <div className="px-1 md:px-2 max-w-[1024px] mx-auto bg-gray-100 dark:bg-zinc-900 ">
             {children}
           </div>
           {!showBetslip && (

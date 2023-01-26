@@ -4,9 +4,16 @@ import store from "../core/store";
 import "../core/styles/root.css";
 import { ThemeProvider } from "next-themes";
 import Layout from "../components/Typography/layout";
+import { useRouter } from "next/router";
 
 const App = (props: AppProps) => {
   const { Component, pageProps } = props;
+  const router = useRouter();
+
+  if (router.pathname === "/404") {
+    return <Component {...pageProps} />;
+  }
+
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       <Provider store={store}>

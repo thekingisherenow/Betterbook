@@ -1,10 +1,20 @@
-import React from "react";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
 import FeaturedMatch from "../../components/Typography/Sportspage/FeaturedMatch";
 import Leauges from "../../components/Typography/Sportspage/Leauges";
 import Matches from "../../components/Typography/Sportspage/Matches";
 import SportsPageBanner from "../../components/Typography/Sportspage/SportsPageBanner";
 
 function Sport() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const games = ["soccer", "football", "basketball", "tennis", "baseball"];
+    if (!games.includes(router.query.sport as string)) {
+      router.push("/404");
+    }
+  }, [router]);
+
   return (
     <main>
       <div className="grid grid-cols-3">
