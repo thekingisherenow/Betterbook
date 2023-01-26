@@ -1,7 +1,7 @@
 import React from 'react'
-import Banner from '../components/Typography/Banner'
+import Banner from '../components/Banner'
 
-function Matches() {
+const Matches = () => {
   return (
     <div>
       <Banner />

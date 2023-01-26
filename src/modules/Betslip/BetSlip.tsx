@@ -8,7 +8,7 @@ interface Props {
 const BetSlip: React.FC<Props> = ({ betslipState: [showBetslip, setShowBetslip] }) => {
   return (
     <div className='flex flex-col w-60  m-4 shadow-lg bg-gray-100
-    dark:bg-zinc-900'>
+    dark:bg-dark'>
 
       <div className='flex h-8 bg-gradient-to-r text-white from-[#38529e] to-[#4160ab]'>
         <ArrowRightOnRectangleIcon onClick={() => setShowBetslip(!showBetslip)}

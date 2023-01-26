@@ -9,8 +9,7 @@ import Navbar from './Navbar/Navbar'
 interface LayoutProps {
     children: ReactNode
 }
-
-export default function Layout({ children }: LayoutProps) {
+const Layout = ({ children }: LayoutProps) => {
     const [showNav, setShowNav] = useState(true)
     const [isMobile, setIsMobile] = useState(false)
     const [showBetslip, setShowBetslip] = useState(false)
@@ -54,7 +53,7 @@ export default function Layout({ children }: LayoutProps) {
             <main
                 className={`relative pt-14 transition-all w-screen h-screen duration-[400ms] flex ${showNav && !isMobile ? "pl-40" : ""}`} >
                 <>
-                    <div className='px-1 md:px-2 w-full  bg-gray-100 dark:bg-zinc-900 '>
+                    <div className='px-1 md:px-2 w-full  bg-gray-100 dark:bg-dark '>
                         {children}
                     </div>
                     {!showBetslip && <div className='h-60 p-4 '>
@@ -72,3 +71,6 @@ export default function Layout({ children }: LayoutProps) {
         </>
     )
 }
+
+
+export default Layout

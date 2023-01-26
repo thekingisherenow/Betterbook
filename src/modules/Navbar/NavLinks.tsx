@@ -3,7 +3,7 @@ import { categories } from './constants'
 import NavLink from './NavLink'
 import { useRouter } from 'next/router'
 
-function NavLinks() {
+const NavLinks = () => {
   const router = useRouter();
 
   //const isActive is true if the pathname in the url matches the navlink's path.

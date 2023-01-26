@@ -2,7 +2,7 @@ import { StarIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
 import React from 'react'
 
-function FeaturedMatch() {
+const FeaturedMatch = () => {
     return (
         <div className='flex flex-col  border border-gray-600 rounded-xl'>
             <div className='flex m-4'>

@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import store from '../core/store'
 import '../core/styles/root.css'
 import { ThemeProvider } from 'next-themes'
-import Layout from '../components/Typography/layout'
+import Layout from '../modules/layout'
 
 const App = (props: AppProps) => {
   const { Component, pageProps } = props

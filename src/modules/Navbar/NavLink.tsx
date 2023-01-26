@@ -7,7 +7,7 @@ type Props = {
   isActive: boolean;
 }
 
-function NavLink({ category, path, isActive }: Props) {
+const  NavLink = ({ category, path, isActive }: Props) => {
   return (
     <Link href={`${path}`}
       className={`cursor-pointer p-1 md:p-3  text-xs md:text-sm  font-semibold

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-function Leauges() {
+const Leauges = () => {
     return (
         <>
             <h1 className='mt-4 mb-2 font-semibold'> Soccer Leauges</h1>

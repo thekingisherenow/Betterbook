@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SingleBet() {
+const SingleBet = () => {
   return (
     <div className=''>
       Single 

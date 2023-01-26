@@ -12,7 +12,7 @@ const Navbar: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
   return (
     <header>
       <div className={`w-full z-20 p-1 fixed flex text-center h-14 bg-gray-100
-       dark:bg-zinc-900  border-b border-gray-300 ${showNav ? "" : ""} `}>
+       dark:bg-dark  border-b border-gray-300 ${showNav ? "" : ""} `}>
         <div className='flex space-x-6 '>
           <Bars3Icon
             onClick={() => setShowNav(!showNav)}

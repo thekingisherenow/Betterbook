@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
 
-function DarkModeButton() {
+const DarkModeButton = () => {
   const [mounted, setMounted] = useState(false)
   const { systemTheme, theme, setTheme } = useTheme()
   useEffect(() => {

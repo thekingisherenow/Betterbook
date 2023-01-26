@@ -3,7 +3,7 @@ import SingleBet from './SingleBet'
 import { TicketIcon } from '@heroicons/react/24/solid'
 
 const bets = []
-function BetList() {
+const  BetList = () => {
   return (
     <div>
       {bets.length === 0 ?

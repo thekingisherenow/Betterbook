@@ -12,7 +12,7 @@ const Sidebar = forwardRef<HTMLDivElement, Props>(({ navState: [showNav, setShow
     return (
         <div ref={ref}
             className='fixed text-sm border border-t-0 h-full  shadow-2xl  w-40 
-             bg-gray-100 dark:bg-zinc-900 z-50 dark:border-gray-500'>
+             bg-gray-100 dark:bg-dark z-50 dark:border-gray-500'>
 
             <div className=' flex flex-col text-z dark:text-gray-200 '>
                 {/* Image */}

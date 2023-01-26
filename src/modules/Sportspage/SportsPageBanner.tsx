@@ -1,7 +1,7 @@
 import { TrophyIcon } from '@heroicons/react/24/solid'
 import React from 'react'
 
-function SportsPageBanner() {
+const SportsPageBanner = () => {
     return (
         <div className='bg-[#1c92fe] rounded-md text-gray-100' >
             <div className='py-5 px-6 ml-4'>

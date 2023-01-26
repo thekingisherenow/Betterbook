@@ -1,8 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
 
-function Matches() {
-    return (<>
+type Props = {
+    
+}
+const Matches = () => {
+    return (
+    <>
     <h1 className='mt-10'>Matches</h1>
         <div className=' h-80 mt-1 rounded-t-md border border-gray-600'>
             <div className='flex text-sm text-center rounded-md bg-gray-500 font-semibold text-gray-300 h-8 '>
