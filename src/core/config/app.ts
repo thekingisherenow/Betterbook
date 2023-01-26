@@ -1,1 +1,1 @@
-export const name = 'Openbook'
+export const name = "Openbook";

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function BetsField() {
-  return (
-    <div>
-      This is the BetsField..
-    </div>
-  )
+  return <div>This is the BetsField..</div>;
 }
 
-export default BetsField
+export default BetsField;

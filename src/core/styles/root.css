@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-    .box{
-        @apply bg-gray-700 my-1 mx-2 text-gray-100 p-1 cursor-pointer hover:bg-blue-500
-    }
+  .box {
+    @apply bg-gray-700 my-1 mx-2 text-gray-100 p-1 cursor-pointer hover:bg-blue-500;
+  }
 }

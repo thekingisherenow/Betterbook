@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function SingleBet() {
-  return (
-    <div className=''>
-      Single 
-    </div>
-  )
+  return <div className="">Single</div>;
 }
 
-export default SingleBet
+export default SingleBet;
