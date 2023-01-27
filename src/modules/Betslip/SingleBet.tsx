@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const SingleBet = () => {
   return (
@@ -8,4 +8,4 @@ const SingleBet = () => {
   )
 }
 
-export default SingleBet
+export default SingleBet;

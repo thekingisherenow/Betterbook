@@ -1,10 +1,10 @@
-import { Game } from '../../types/game'
+import { Game } from "../../types/game";
 
 export const fetchGames = (): Promise<Game[]> => {
   return Promise.resolve([
     {
-      id: '1',
-      name: 'Spain vs Argentina',
+      id: "1",
+      name: "Spain vs Argentina",
     },
-  ])
-}
+  ]);
+};

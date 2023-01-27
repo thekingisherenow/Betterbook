@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
 
 const  Banner = () => {
   return (
-    <div className='relative'>
-      <Carousel autoPlay infiniteLoop showStatus={false} showIndicators={false} showThumbs={false} interval={3000}>
+    <div className="relative">
+      <Carousel
+        autoPlay
+        infiniteLoop
+        showStatus={false}
+        showIndicators={false}
+        showThumbs={false}
+        interval={3000}
+      >
         <div>
           <img alt="banner" loading="lazy" src="https://iili.io/HcdPcX9.jpg" />
         </div>
@@ -17,7 +24,7 @@ const  Banner = () => {
         </div>
       </Carousel>
     </div>
-  )
+  );
 }
 
-export default Banner
+export default Banner;

@@ -6,7 +6,7 @@ const Matches = () => {
     <div>
       <Banner />
     </div>
-  )
+  );
 }
 
-export default Matches
+export default Matches;
