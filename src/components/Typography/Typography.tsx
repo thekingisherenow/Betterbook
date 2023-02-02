@@ -24,6 +24,10 @@ const Typography: React.FC<TypographyProps> = (props) => {
       return <h1 className={classNames}>{children}</h1>;
     case "title2":
       return <h2 className={classNames}>{children}</h2>;
+      case "title3":
+      return <h2 className={classNames}>{children}</h2>;
+      case "subtitle1":
+      return <h3 className={classNames}>{children}</h3>;
     default:
       return null;
   }

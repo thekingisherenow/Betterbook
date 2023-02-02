@@ -1,34 +1,35 @@
 import Image from "next/image";
 import React from "react";
+import Typography from "../../components/Typography/Typography";
 
 const Leauges = () => {
     return (
         <>
-            <h1 className='mt-4 mb-2 font-semibold'> Soccer Leauges</h1>
+            <Typography variation="title2">Soccer Leauges</Typography>
 
-      <div className="flex flex-col h-[250px] space-y-1 border border-gray-600 text-xs rounded-xl">
+      <div className="flex flex-col h-[250px] space-y-1 border border-LightBorder dark:border-DarkBorder text-xs rounded-xl">
         <div className="flex space-x-3 lg:space-x-6 cursor-pointer  py-2 ">
           <div className="relative w-8 h-8 ml-2 lg:ml-4">
             <Image
               className="object-cover"
               sizes="8vw"
-              src={"https://iili.io/Hli55Vs.png"}
+              src={"/images/premier-league.png"}
               fill
-              alt="favicon"
+              alt="premier leauge"
             />
           </div>
           <h1 className="my-auto  text-left flex-grow">Premiere Leauge</h1>
           <h1 className="text-left px-5 my-auto ">5</h1>
         </div>
 
-        <hr className="border-gray-600" />
+        <hr className="border-LightBorder dark:border-DarkBorder" />
 
         <div className="flex space-x-3 lg:space-x-6 cursor-pointer  py-2 ">
           <div className="relative w-8 h-8 ml-2 lg:ml-4">
             <Image
               className="object-cover"
               sizes="8vw"
-              src={"https://iili.io/H0AC771.png"}
+              src={"/images/laliga.png"}
               fill
               alt="laliga-icon"
             />
@@ -37,7 +38,7 @@ const Leauges = () => {
           <h1 className="text-left px-5 my-auto ">5</h1>
         </div>
 
-        <hr className="border-gray-600" />
+        <hr className="border-LightBorder dark:border-DarkBorder" />
       </div>
     </>
   );

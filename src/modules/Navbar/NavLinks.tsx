@@ -14,7 +14,7 @@ const NavLinks = () => {
   };
 
   return (
-    <nav className="whitespace-nowrap">
+    <nav className="whitespace-nowrap flex space-x-4">
       {categories.map((category) => (
         <NavLink
           key={category.label}

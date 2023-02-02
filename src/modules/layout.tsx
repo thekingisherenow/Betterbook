@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import BetSlip from "./Betslip/BetSlip";
 import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/solid";
 import Navbar from "./Navbar/Navbar";
+import Head from "next/head";
 
 interface LayoutProps {
   children: ReactNode;
@@ -37,6 +38,12 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <>
+    <Head>
+        <title>Bettor Book</title>
+        <meta name="description" content=" Sports Betting" />
+        <link rel="shortcut icon" href="/images/favIcon.png" />
+      </Head>
+
       <Navbar navState={[showNav, setShowNav]} />
       <Transition
         show={showNav}
@@ -51,12 +58,12 @@ export default function Layout({ children }: LayoutProps) {
         <Sidebar navState={[showNav, setShowNav]} />
       </Transition>
       <main
-        className={`relative pt-14 transition-all bg-gray-100 w-screen h-screen duration-[400ms] flex ${
+        className={`relative pt-20 transition-all bg-gray-100 dark:bg-DarkBackground w-screen font-inter h-screen duration-[400ms] flex ${
           showNav && !isMobile ? "pl-40" : ""
         }`}
       >
         <>
-          <div className="px-1 md:px-2 max-w-[1024px] mx-auto bg-gray-100 dark:bg-zinc-900 ">
+          <div className="px-1 md:px-2 max-w-[1024px] mx-auto  ">
             {children}
           </div>
           {!showBetslip && (
@@ -64,7 +71,7 @@ export default function Layout({ children }: LayoutProps) {
               {/* BetSlipToggleButton  */}
               <ArrowLeftOnRectangleIcon
                 onClick={() => setShowBetslip(!showBetslip)}
-                className="w-8 h-8 cursor-pointer flex items-center font-extrabold"
+                className="w-8 h-8 cursor-pointer flex items-center "
               />
             </div>
           )}

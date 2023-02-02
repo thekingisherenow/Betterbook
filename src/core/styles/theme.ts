@@ -1,8 +1,8 @@
 export const typography = {
-  title1: "text-3xl font-bold",
-  title2: "text-2xl font-bold",
-  title3: "text-xl font-bold",
-  subtitle1: "",
+  title1: "text-normal text-DarkFontColor1 ",
+  title2: "text-bold text-DarkFontColor2 ",
+  title3: "text-normal text-DarkFontColor2 ",
+  subtitle1: "text-sub text-DarkFontColor1",
   subtitle2: "",
   subtitle3: "",
   subtitle4: "",

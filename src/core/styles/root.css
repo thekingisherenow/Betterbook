@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .box {
-    @apply bg-gray-700 my-1 mx-2 text-gray-100 p-1 cursor-pointer hover:bg-blue-500;
-  }
+@layer base {
+    @font-face {
+        font-family: 'Inter';
+        font-weight:700;
+        font-style: normal;
+        src: url("../../../public/font/Inter-VariableFont_slnt\,wght.ttf") format('truetype')
+    }
 }

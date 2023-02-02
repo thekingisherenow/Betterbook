@@ -12,7 +12,7 @@ const BetSlip: React.FC<Props> = ({
   betslipState: [showBetslip, setShowBetslip],
 }) => {
   return (
-    <div className='flex flex-col w-60  m-4 shadow-lg bg-gray-100
+    <div className='flex flex-col w-96  m-4 shadow-lg bg-gray-100
     dark:bg-dark'>
 
       <div className='flex h-8 bg-gradient-to-r text-white from-[#38529e] to-[#4160ab]'>
@@ -29,19 +29,19 @@ const BetSlip: React.FC<Props> = ({
       </div>
 
       <div
-        className="flex border-t border-gray-300 dark:border-gray-600 text-sm px-4 py-5 text-center justify-center
+        className="flex border-t border-DarkBorder dark:border-LightBorder text-sm px-4 py-5 text-center justify-center
       items-center"
       >
         <div className="px-1  border-r border-gray-300 dark:border-gray-600 ">
-          <h3 className=" font-semibold">Total Rate</h3>
-          <h3 className=" text-white font-bold bg-blue-500 rounded-sm w-11 items-center mx-auto  ">
+          <h3 className=" ">Total Rate</h3>
+          <h3 className=" text-white  bg-blue-500 rounded-sm w-11 items-center mx-auto  ">
             1.22
           </h3>
         </div>
 
         <div className="px-1 ">
-          <h3 className="font-semibold">Possible Winnings</h3>
-          <h3 className="font-extrabold text-transparent  bg-clip-text bg-blue-500">
+          <h3 className="">Possible Winnings</h3>
+          <h3 className=" text-transparent  bg-clip-text bg-blue-500">
             538.22 DAI
           </h3>
         </div>

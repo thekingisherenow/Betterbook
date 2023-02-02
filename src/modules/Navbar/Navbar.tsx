@@ -11,25 +11,25 @@ interface Props {
 const Navbar: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
   return (
     <header>
-      <div className={`w-full z-20 p-1 fixed flex text-center h-14 bg-gray-100
-       dark:bg-dark  border-b border-gray-300 ${showNav ? "" : ""} `}>
+      <div className={`w-full font-inter z-20 p-1 fixed flex text-center h-20 bg-gray-100
+       dark:bg-DarkBackground  border-b border-LightBorder dark:border-DarkBorder ${showNav ? "" : ""} `}>
         <div className='flex space-x-6 '>
           <Bars3Icon
             onClick={() => setShowNav(!showNav)}
             className="h-11 w-11 p-3  text-center  cursor-pointer"
           />
-          <div className="relative w-10 h-10  ">
+          <div className="relative w-10 h-10">
             <Image
               className="object-cover"
               sizes="10vw"
-              src={"https://iili.io/HlqHCP4.png"}
+              src={"/images/favIcon.png"}
               fill
               alt="favicon"
             />
           </div>
         </div>
 
-        <div className="ml-10">
+        <div className="ml-24">
           {/* Nav Links */}
           <div className=" items-center p-2 w-36   ">
             <NavLinks />
@@ -38,11 +38,12 @@ const Navbar: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
         <div className="flex space-x-2 justify-end ml-auto mr-4  ">
           {/* DARK MODE BUTTON  */}
           <DarkModeButton />
+
           <div className="text-center flex items-center p-1 ">
             {/* Image  */}
             <div className="relative h-12 w-12 rounded-full cursor-pointer ">
               <Image
-                src={"https://iili.io/HamKXbj.jpg"}
+                src={"/images/monkey.png"}
                 className="object-cover rounded-full p-1"
                 sizes="6vw"
                 alt="avatar"
@@ -50,8 +51,8 @@ const Navbar: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
               />
             </div>
             <div className="flex flex-col text-sm text-left">
-              <h2 className="text-gray-600 font-semibold">0*084</h2>
-              <h2 className="font-semibold">12.65 DAI</h2>
+              <h2 className="text-gray-600 text-small">0*084</h2>
+              <h2 className="">12.65 DAI</h2>
             </div>
           </div>
         </div>

@@ -1,20 +1,21 @@
 import Link from "next/link";
 import React from "react";
+import Typography from "../../components/Typography/Typography";
 
-type Props = {
+interface NavLinkProps  {
   category: string;
   path: string;
   isActive: boolean;
 };
 
-const  NavLink = ({ category, path, isActive }: Props) => {
+const  NavLink:React.FC<NavLinkProps> = ({ category, path, isActive }) => {
   return (
     <Link
       href={`${path}`}
-      className={`cursor-pointer p-1 md:p-3  text-xs md:text-sm  font-semibold
-         ${isActive && "text-blue-500 hover:text-blue-600 font-bold "}`}
+      className={`cursor-pointer p-1 md:p-3  text-xs md:text-sm  
+         ${isActive && "dark:text-DarkActionColor text-LightActionColor hover:text-blue-600  "}`}
     >
-      {category}
+     <Typography variation="title1">{category}</Typography>
     </Link>
   );
 }
