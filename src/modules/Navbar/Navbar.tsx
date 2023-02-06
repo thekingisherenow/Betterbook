@@ -3,33 +3,17 @@ import React, { Dispatch, SetStateAction } from "react";
 import NavLinks from "./NavLinks";
 import DarkModeButton from "./DarkModeButton";
 import Image from "next/image";
+import Typography from "../../components/Typography/Typography";
 
-interface Props {
-  navState: [boolean, Dispatch<SetStateAction<boolean>>];
-}
 
-const Navbar: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
+
+const Navbar: React.FC = () => {
   return (
     <header>
-      <div className={`w-full font-inter z-20 p-1 fixed flex text-center h-20 bg-gray-100
-       dark:bg-DarkBackground  border-b border-LightBorder dark:border-DarkBorder ${showNav ? "" : ""} `}>
-        <div className='flex space-x-6 '>
-          <Bars3Icon
-            onClick={() => setShowNav(!showNav)}
-            className="h-11 w-11 p-3  text-center  cursor-pointer"
-          />
-          <div className="relative w-10 h-10">
-            <Image
-              className="object-cover"
-              sizes="10vw"
-              src={"/images/favIcon.png"}
-              fill
-              alt="favicon"
-            />
-          </div>
-        </div>
-
-        <div className="ml-24">
+      <div className="z-20 p-1  w-[120rem] flex text-center h-20 bg-gray-100
+       dark:bg-DarkBackground  border-b border-LightBorder dark:border-DarkBorder  ">
+  
+        <div className="ml-60">
           {/* Nav Links */}
           <div className=" items-center p-2 w-36   ">
             <NavLinks />
@@ -41,7 +25,7 @@ const Navbar: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
 
           <div className="text-center flex items-center p-1 ">
             {/* Image  */}
-            <div className="relative h-12 w-12 rounded-full cursor-pointer ">
+            <div className="relative h-14 w-14 rounded-full cursor-pointer ">
               <Image
                 src={"/images/monkey.png"}
                 className="object-cover rounded-full p-1"
@@ -50,9 +34,9 @@ const Navbar: React.FC<Props> = ({ navState: [showNav, setShowNav] }) => {
                 fill
               />
             </div>
-            <div className="flex flex-col text-sm text-left">
-              <h2 className="text-gray-600 text-small">0*084</h2>
-              <h2 className="">12.65 DAI</h2>
+            <div className="flex flex-col  text-left w-32">
+              <Typography variation="title1">0*0a8...6cd</Typography>
+              <Typography variation="title3">12.65 DAI</Typography>
             </div>
           </div>
         </div>

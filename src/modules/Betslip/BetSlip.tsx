@@ -1,51 +1,45 @@
-import {
-  ArrowRightOnRectangleIcon,
-  TicketIcon,
-} from "@heroicons/react/24/solid";
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import BetList from "./BetList";
+import Typography from "../../components/Typography/Typography";
 
-interface Props {
-  betslipState: [boolean, Dispatch<SetStateAction<boolean>>];
-}
-const BetSlip: React.FC<Props> = ({
-  betslipState: [showBetslip, setShowBetslip],
-}) => {
+
+const BetSlip: React.FC = () => {
   return (
-    <div className='flex flex-col w-96  m-4 shadow-lg bg-gray-100
-    dark:bg-dark'>
+    <div className='bg-DarkSecondaryBackground h-screen'>
 
-      <div className='flex h-8 bg-gradient-to-r text-white from-[#38529e] to-[#4160ab]'>
-        <ArrowRightOnRectangleIcon onClick={() => setShowBetslip(!showBetslip)}
-          className='w-8 h-8 cursor-pointer' />
-        <div className='flex text-center m-auto '>
-          <TicketIcon className='w-6 h-6' />
-          <h1>Bet Slip</h1>
+      <div className="m-4 p-6 flex  flex-col bg-DarkBetSlipColor h-[575px] ">
+
+        <div className="h-20">
+          
+          <Typography variation="title2" >Bet Slip</Typography>
+
+        </div>
+        
+
+        <div className="h-[340px]">
+          <BetList />
+        </div>
+
+        <div className="grid grid-cols-3 divide-x-2 divide-DarkBorder mt-3">
+          <div className="col-span-1 m-1 flex flex-col space-y-4">
+            <Typography variation="title3" >Total Rate</Typography>
+            <h3 className=" bg-DarkActionColor w-16 h-8  rounded-md flex text-center items-center justify-center mx-auto ">
+              1.22
+            </h3>
+          </div>
+
+          <div className="col-span-2 m-1 flex flex-col space-y-4">
+            <div className="text-center">
+            <Typography variation="title3" >Possible Winnings</Typography>
+            </div>
+            <h3 className=" text-transparent bg-DarkActionColor bg-clip-text inline-block text-bold  text-center">
+              538.22 DAI
+            </h3>
+          </div>
         </div>
       </div>
 
-      <div>
-        <BetList />
-      </div>
 
-      <div
-        className="flex border-t border-DarkBorder dark:border-LightBorder text-sm px-4 py-5 text-center justify-center
-      items-center"
-      >
-        <div className="px-1  border-r border-gray-300 dark:border-gray-600 ">
-          <h3 className=" ">Total Rate</h3>
-          <h3 className=" text-white  bg-blue-500 rounded-sm w-11 items-center mx-auto  ">
-            1.22
-          </h3>
-        </div>
-
-        <div className="px-1 ">
-          <h3 className="">Possible Winnings</h3>
-          <h3 className=" text-transparent  bg-clip-text bg-blue-500">
-            538.22 DAI
-          </h3>
-        </div>
-      </div>
     </div>
   );
 };

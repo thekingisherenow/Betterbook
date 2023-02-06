@@ -23,16 +23,21 @@ function Sport() {
         <meta name="description" content=" Sports Betting" />
         <link rel="shortcut icon" href="/images/favIcon.png" />
       </Head>
-      <div className="grid grid-cols-3 ">
-        <div className="col-span-1 mx-4 mt-6  ">
+      <div className="grid grid-cols-3 w-full mx-auto ">
+        <div className="col-span-1 mt-[2rem] ">
+          <div className="w-[23.2rem] mx-auto ">
           <FeaturedMatch />
           <Leauges />
+          </div>
         </div>
 
-        <div className="col-span-2  mx-2 mt-9 ">
+        <div className="col-span-2  mt-14 ">
+          <div className=" w-[50.25rem] ml-5">
           <SportsPageBanner />
           <Matches />
+          </div>
         </div>
+        
       </div>
     </main>
   );

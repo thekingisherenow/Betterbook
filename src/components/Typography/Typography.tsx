@@ -6,6 +6,10 @@ interface TypographyProps extends PropsWithChildren {
     | "title1"
     | "title2"
     | "title3"
+    | "title4"
+    | "bannerTitle"
+    | "bannerSubtitle"
+    | "bigvs"                                             ////
     | "subtitle1"
     | "subtitle2"
     | "subtitle3"
@@ -26,8 +30,18 @@ const Typography: React.FC<TypographyProps> = (props) => {
       return <h2 className={classNames}>{children}</h2>;
       case "title3":
       return <h2 className={classNames}>{children}</h2>;
+      case "title4":
+      return <h2 className={classNames}>{children}</h2>;
+      case "bannerTitle":
+      return <h2 className={classNames}>{children}</h2>;
+      case "bannerSubtitle":
+      return <h2 className={classNames}>{children}</h2>;
+      case "bigvs":
+      return <h2 className={classNames}>{children}</h2>;
       case "subtitle1":
       return <h3 className={classNames}>{children}</h3>;
+      case "subtitle2":
+        return <h3 className={classNames}>{children}</h3>;
     default:
       return null;
   }

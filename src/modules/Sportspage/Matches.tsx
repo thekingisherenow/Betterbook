@@ -1,24 +1,43 @@
 import Image from "next/image";
 import React from "react";
+import Typography from "../../components/Typography/Typography";
+import OddsButton from "../../components/Button/OddsButton";
 
 const Matches = () => {
   return (
-    <>
-      <h1 className="mt-10">Matches</h1>
-      <div className=" h-80 mt-1 rounded-t-md border border-LightBorder dark:border-DarkBorder">
-        <div className="flex text-sm text-center rounded-md bg-gray-500  text-gray-300 h-8 ">
-          <p className="w-32 my-auto">Date</p>
-          <p className="w-52 flex-grow my-auto">Match</p>
-          <p className="w-14 my-auto">1x</p>
-          <p className="w-14 my-auto">x</p>
-          <p className="w-14 my-auto">2x</p>
-          <p className="w-14 my-auto mr-1"></p>
+    <div>
+      <div className="mt-8 mb-4">
+      <Typography variation="title2">Matches</Typography>
+      </div>
+      <div className=" h-80 mt-1 rounded-xl border border-LightBorder dark:border-DarkBorder">
+        <div className="flex  text-center rounded-xl bg-DarkSecondaryBackground  text-gray-300 h-16 items-center  ">
+          <div className="w-48">
+            <Typography variation="title4">Date</Typography>
+          </div>
+          <div className="w-80 flex-grow">
+            <Typography variation="title4">Match</Typography>
+          </div>
+          <div className="w-16">
+            <Typography variation="title4">1x</Typography>
+          </div>
+          <div className="w-16">
+            <Typography variation="title4">x</Typography>
+          </div>
+          <div className="w-16">
+            <Typography variation="title4">2x</Typography>
+          </div>
+          <div className="w-16">
+            <Typography variation="title4"></Typography>
+          </div>
         </div>
-        <div className="flex text-sm text-center  h-14 ">
-          <p className="w-32 my-auto">20:00 Today</p>
-          <div className="w-52  flex items-center justify-center flex-grow">
+        <div className="flex items-center  text-center  h-20 ">
+          <div className="w-48 ">
+            <Typography variation="title3">20:00 Today</Typography>
+          </div>
+
+          <div className="w-80  flex items-center justify-center flex-grow">
             <div className="flex flex-col flex-grow">
-              <div className="relative w-6 h-6 mx-auto   ">
+              <div className="relative w-11 h-11 mx-auto   ">
                 <Image
                   className="object-cover"
                   sizes="8vw"
@@ -27,13 +46,12 @@ const Matches = () => {
                   alt="favicon"
                 />
               </div>
-              <h2 className="text-xs">Barcelona </h2>
+              <Typography variation="subtitle2">Barcelona</Typography>
+
             </div>
-
-            <h1 className="text-xl px-2  ">vs </h1>
-
+            <Typography variation="title3">VS</Typography>
             <div className="flex flex-col flex-grow">
-              <div className="relative w-6 h-6 mx-auto  ">
+              <div className="relative w-11 h-11 mx-auto  ">
                 <Image
                   className="object-cover"
                   sizes="8vw"
@@ -42,26 +60,28 @@ const Matches = () => {
                   alt="favicon"
                 />
               </div>
-              <h2 className="text-xs"> Chelsea</h2>
+              <Typography variation="subtitle2">Chelsea</Typography>
+
             </div>
           </div>
-          <div className="w-14 my-auto text-xs ">
-            <p className="box ">1.98</p>
+
+          <div className="w-16   ">
+            <OddsButton odds={1.98} />
           </div>
-          <div className="w-14 my-auto text-xs">
-            <p className="box"> 2.73</p>
+          <div className="w-16  ">
+            <OddsButton odds={2.73} />
           </div>
-          <div className="w-14 my-auto text-xs">
-            <p className="box"> 1.31</p>
+          <div className="w-16  ">
+            <OddsButton odds={1.31} />
           </div>
-          <div className="w-14 my-auto text-xs mr-1">
-            <p className="box ">...</p>
+          <div className="w-16   mr-1">
+              ...
           </div>
         </div>
         <hr className="border-LightBorder dark:border-DarkBorder" />
-       
+
       </div>
-    </>
+    </div>
   );
 }
 

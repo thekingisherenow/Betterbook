@@ -38,51 +38,27 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <>
-    <Head>
+      <Head>
         <title>Bettor Book</title>
         <meta name="description" content=" Sports Betting" />
         <link rel="shortcut icon" href="/images/favIcon.png" />
       </Head>
 
-      <Navbar navState={[showNav, setShowNav]} />
-      <Transition
-        show={showNav}
-        as={Fragment}
-        enter="transform transition duration duration-[400ms]"
-        enterFrom="-translate-x-full"
-        enterTo="translate-x-0"
-        leave="transform transition duration duration-[400ms] ease-in-out"
-        leaveFrom="translate-x-0"
-        leaveTo="-translate-x-full"
-      >
-        <Sidebar navState={[showNav, setShowNav]} />
-      </Transition>
-      <main
-        className={`relative pt-20 transition-all bg-gray-100 dark:bg-DarkBackground w-screen font-inter h-screen duration-[400ms] flex ${
-          showNav && !isMobile ? "pl-40" : ""
-        }`}
-      >
-        <>
-          <div className="px-1 md:px-2 max-w-[1024px] mx-auto  ">
-            {children}
+      <div className="w-[120rem] mx-auto font-inter">
+        <Navbar />
+        <div className="flex">
+          <div >
+            <Sidebar />
           </div>
-          {!showBetslip && (
-            <div className="h-60 p-4 ">
-              {/* BetSlipToggleButton  */}
-              <ArrowLeftOnRectangleIcon
-                onClick={() => setShowBetslip(!showBetslip)}
-                className="w-8 h-8 cursor-pointer flex items-center "
-              />
-            </div>
-          )}
-
-          {showBetslip && (
-            <div className="bg-slate-300 dark:bg-zinc-800">
-              <BetSlip betslipState={[showBetslip, setShowBetslip]} />
-            </div>
-          )}
-        </>
-      </main>
+          <main
+            className="dark:bg-DarkBackground w-[81.62rem] mx-auto ">
+              {children}
+          </main>
+          <div className="w-[23.82rem] dark:bg-DarkSecondaryBackground h-full ml-auto">
+            <BetSlip />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

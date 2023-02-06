@@ -1,21 +1,30 @@
 import { TrophyIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import React from "react";
+import Typography from "../../components/Typography/Typography";
 
 const SportsPageBanner = () => {
-  return (
-    <div>
-        <div className='bg-[#1c92fe] rounded-md text-gray-100' >
-            <div className='py-5 px-6 ml-4'>
+    return (
+        <div className='h-[13.5rem]   dark:bg-DarkActionColor bg-LightActionColor rounded-2xl text-gray-100 flex' >
+            <div className='  ml-16 mt-6  '>
                 <div className='flex  '>
-                    <p className='text-big'>Goerli Testnet Tournament. </p>
-                    <TrophyIcon className='w-7 h-7 text-yellow-500' />
+                    <Typography variation="bannerTitle">Goerli Testnet Tournament.</Typography>
+                    <TrophyIcon className='w-7 h-7 text-[#ffc344]' />
                 </div>
-                <p className='text-xs'>The winner of the Goerli testnet tournament gets 500 DAI.</p>
-                <button className='bg-white text-[#1c92fe] px-7 py-3 rounded-lg mt-4 '>More Details</button>
+                <div className="mt-3 mr-10">
+                    <Typography variation="bannerSubtitle">The winner of the Goerli testnet tournament gets 500 DAI.</Typography>
+                </div>
+
+                <button className='bg-white w-60 h-14 bg-BannerFontColor text-normal
+                 dark:text-DarkActionColor text-LightActionColor mt-8 rounded-lg  '>More Details</button>
+            </div>
+            <div className='relative w-[21.68rem] h-[17.37rem] -mt-[3.87rem] mr-10   '>
+                <Image className='object-cover' sizes='30vw'
+                    src={"/images/messi.png"} fill alt='favicon' />
             </div>
         </div>
-      </div >
-  );
+
+    );
 }
 
 export default SportsPageBanner;

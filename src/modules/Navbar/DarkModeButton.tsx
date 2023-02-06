@@ -16,16 +16,17 @@ const DarkModeButton = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <div>
+    <div className="flex items-center">
       {currentTheme === "dark" ? (
         <SunIcon
           onClick={() => setTheme("light")}
-          className="h-10 w-12 p-1 cursor-pointer text-center border-x-2 border-LightBorder dark:border-DarkBorder text-yellow-500"
+          className="h-14 w-20 p-1 cursor-pointer  border-x-2 border-LightBorder dark:border-DarkBorder "
         />
       ) : (
         <MoonIcon
           onClick={() => setTheme("dark")}
-          className="h-10 w-12 p-1 cursor-pointer text-center border-x-2 border-LightBorder dark:border-DarkBorder text-gray-900"
+          className="h-14 w-20 p-1 cursor-pointer  border-x-2 border-LightBorder dark:border-DarkBorder
+           text-gray-900"
         />
       )}
     </div>

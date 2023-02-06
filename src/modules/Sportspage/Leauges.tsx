@@ -3,13 +3,13 @@ import React from "react";
 import Typography from "../../components/Typography/Typography";
 
 const Leauges = () => {
-    return (
-        <>
-            <Typography variation="title2">Soccer Leauges</Typography>
+  return (
+    <div className="mt-8  ">
+      <Typography variation="title2">Soccer Leauges</Typography>
+      <div className="flex flex-col mt-3 space-y-1 border border-LightBorder dark:border-DarkBorder text-xs rounded-xl">
 
-      <div className="flex flex-col h-[250px] space-y-1 border border-LightBorder dark:border-DarkBorder text-xs rounded-xl">
-        <div className="flex space-x-3 lg:space-x-6 cursor-pointer  py-2 ">
-          <div className="relative w-8 h-8 ml-2 lg:ml-4">
+        <div className="flex  items-center  cursor-pointer  py-4 text-center">
+          <div className="relative w-12 h-12 ml-9 ">
             <Image
               className="object-cover"
               sizes="8vw"
@@ -18,29 +18,39 @@ const Leauges = () => {
               alt="premier leauge"
             />
           </div>
-          <h1 className="my-auto  text-left flex-grow">Premiere Leauge</h1>
-          <h1 className="text-left px-5 my-auto ">5</h1>
+          <div className="w-48 ml-4 text-left ">
+          <Typography variation="title3">Premiere Leaugeeeee</Typography>
+          </div>
+          <div className="w-7 ml-4 ">
+          <Typography variation="title3">5</Typography>
+          </div>
         </div>
 
         <hr className="border-LightBorder dark:border-DarkBorder" />
 
-        <div className="flex space-x-3 lg:space-x-6 cursor-pointer  py-2 ">
-          <div className="relative w-8 h-8 ml-2 lg:ml-4">
+        <div className="flex  items-center  cursor-pointer  py-4 text-center">
+          <div className="relative w-12 h-12 ml-9 ">
             <Image
               className="object-cover"
               sizes="8vw"
               src={"/images/laliga.png"}
               fill
-              alt="laliga-icon"
+              alt="premier leauge"
             />
           </div>
-          <h1 className=" my-auto text-left  flex-grow">La liga</h1>
-          <h1 className="text-left px-5 my-auto ">5</h1>
+          <div className="w-48 ml-4 text-left ">
+          <Typography variation="title3">La Liga</Typography>
+          </div>
+          <div className="w-7 ml-4 ">
+          <Typography variation="title3">5</Typography>
+          </div>
         </div>
 
-        <hr className="border-LightBorder dark:border-DarkBorder" />
+        
+
+
       </div>
-    </>
+    </div>
   );
 }
 

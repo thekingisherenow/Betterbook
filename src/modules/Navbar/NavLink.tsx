@@ -12,7 +12,7 @@ const  NavLink:React.FC<NavLinkProps> = ({ category, path, isActive }) => {
   return (
     <Link
       href={`${path}`}
-      className={`cursor-pointer p-1 md:p-3  text-xs md:text-sm  
+      className={`cursor-pointer p-1 md:p-3  text-xs md:  
          ${isActive && "dark:text-DarkActionColor text-LightActionColor hover:text-blue-600  "}`}
     >
      <Typography variation="title1">{category}</Typography>
