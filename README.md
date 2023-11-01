@@ -31,11 +31,3 @@ TypeScript for type safety
 #### 4. Headless UI
 
 [Headless UI](https://headlessui.com/) for pre-build common components like `dropdown`, `toggle` etc.
-
-TODO:
-
-- Setup linting
-- Setup prettier
-- Setup PR workflow
-- Decide Icon library
-- Setup husky (optional)
