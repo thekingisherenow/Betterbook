@@ -5,8 +5,6 @@ import DarkModeButton from "./DarkModeButton";
 import Image from "next/image";
 import Typography from "../../components/Typography/Typography";
 
-
-
 const Navbar: React.FC = () => {
   return (
     <header>
